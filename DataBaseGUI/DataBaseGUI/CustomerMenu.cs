@@ -31,9 +31,7 @@ namespace DataBaseGUI
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 mainMenu = new Form1();
-            this.Hide();
-            mainMenu.Show();
+            this.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -46,9 +44,10 @@ namespace DataBaseGUI
 
         private void button4_Click(object sender, EventArgs e)
         {
+            EditCustomerProfile form = new EditCustomerProfile(customer);
             this.Hide();
-            EditCustomerProfile editProfile = new EditCustomerProfile(customer);
-            editProfile.Show();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

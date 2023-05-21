@@ -42,6 +42,7 @@ namespace DataBaseGUI
             LoginForm loginForm = new LoginForm();
             this.Hide();
             loginForm.ShowDialog();
+            this.Show();
         }
 
         private void RegisterButtonClick(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace DataBaseGUI
             RegistrationForm registrationForm = new RegistrationForm();
             this.Hide();
             registrationForm.ShowDialog();
+            this.Show();
         }
 
     }

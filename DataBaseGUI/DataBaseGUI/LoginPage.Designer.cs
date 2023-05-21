@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.IdBox = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -63,9 +63,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 16F);
             this.label2.Location = new System.Drawing.Point(191, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 27);
+            this.label2.Size = new System.Drawing.Size(64, 27);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Customer ID";
+            this.label2.Text = "Email";
             // 
             // label3
             // 
@@ -77,13 +77,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
-            // IdBox
+            // EmailBox
             // 
-            this.IdBox.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.IdBox.Location = new System.Drawing.Point(353, 152);
-            this.IdBox.Name = "IdBox";
-            this.IdBox.Size = new System.Drawing.Size(173, 30);
-            this.IdBox.TabIndex = 3;
+            this.EmailBox.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.EmailBox.Location = new System.Drawing.Point(353, 152);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(173, 30);
+            this.EmailBox.TabIndex = 3;
             // 
             // PasswordBox
             // 
@@ -99,7 +99,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PasswordBox);
-            this.Controls.Add(this.IdBox);
+            this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -117,7 +117,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox IdBox;
+        private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.TextBox PasswordBox;
     }
 }

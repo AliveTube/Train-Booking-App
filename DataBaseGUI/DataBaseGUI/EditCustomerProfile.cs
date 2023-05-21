@@ -40,7 +40,7 @@ namespace DataBaseGUI
             else
             {
                 // We use using keyword so it handles exeptions if happened and also to close the connection after finishing automatically
-                using (SqlConnection connection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("UPDATE Customer " +
@@ -58,9 +58,7 @@ namespace DataBaseGUI
                     customer.setPassword(textBox5.Text);
                     customer.setPhoneNumber(textBox6.Text);
                     MessageBox.Show("Your new information has been saved successfully");
-                    this.Hide();
-                    CustomerMenu customerMenu = new CustomerMenu(customer);
-                    customerMenu.ShowDialog();
+                    this.Close();
                 }
             }
         }

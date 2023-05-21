@@ -36,21 +36,21 @@ namespace DataBaseGUI
         {
             this.Hide();
             LoginAdmin loginAdmin = new LoginAdmin();
-            loginAdmin.Show();
+            loginAdmin.ShowDialog();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginPage customerLoginPage = new LoginPage();
-            customerLoginPage.Show();
+            customerLoginPage.ShowDialog();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 mainPage = new Form1();
-            mainPage.Show();
+            this.Close();
         }
     }
 }

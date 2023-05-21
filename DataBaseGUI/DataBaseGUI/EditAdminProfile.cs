@@ -60,6 +60,7 @@ namespace DataBaseGUI
                     this.Hide();
                     AdminMenu adminMenu = new AdminMenu(admin);
                     adminMenu.ShowDialog();
+                    this.Close();
                 }
             }
         }

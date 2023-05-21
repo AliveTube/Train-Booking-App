@@ -52,6 +52,12 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTrainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrainForm.Designer.cs">
+      <DependentUpon>AddTrainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="EditCustomerProfile.Designer.cs">
       <DependentUpon>EditCustomerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTrainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTrainForm.Designer.cs">
+      <DependentUpon>EditTrainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -117,6 +129,9 @@
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTrainForm.resx">
+      <DependentUpon>AddTrainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCustomerProfile.resx">
       <DependentUpon>EditCustomerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTrainForm.resx">
+      <DependentUpon>EditTrainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -149,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
@@ -168,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thomas_Tank_Engine_1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

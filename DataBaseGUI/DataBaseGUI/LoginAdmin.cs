@@ -26,7 +26,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     Admin admin = new Admin();
                     customerConnection.Open();
@@ -47,7 +47,8 @@ namespace DataBaseGUI
                         admin.setAdminID(int.Parse(adminIdBox.Text));
                         AdminMenu adminMenu = new AdminMenu(admin);
                         this.Hide();
-                        adminMenu.Show();
+                        adminMenu.ShowDialog();
+                        this.Close();
                     }
                     else
                     {

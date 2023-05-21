@@ -25,30 +25,36 @@ namespace DataBaseGUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            AddTrainForm form = new AddTrainForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            EditTrainForm form = new EditTrainForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AddAdmin addAdminPage = new AddAdmin();
             this.Hide();
-            addAdminPage.Show();
+            addAdminPage.ShowDialog();
+            this.Show();
         }
         private void button6_Click(object sender, EventArgs e)
         {
             EditAdminProfile editAdminProfile = new EditAdminProfile(admin);
             this.Hide();
-            editAdminProfile.Show();
+            editAdminProfile.ShowDialog();
+            this.Show();
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            Form1 mainMenu = new Form1();
-            this.Hide();
-            mainMenu.Show();
+            Close();
         }
     }
 }

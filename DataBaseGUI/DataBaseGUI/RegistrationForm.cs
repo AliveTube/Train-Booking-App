@@ -31,7 +31,7 @@ namespace DataBaseGUI
             else
             {
                 // We use using keyword so it handles exeptions if happened and also to close the connection after finishing automatically
-                using (SqlConnection connection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("INSERT INTO Customer (fName , lName , email , password, phone) values (@fName, @lName, @email, @password, @phone)", connection);
@@ -50,9 +50,7 @@ namespace DataBaseGUI
                     command.Parameters.AddWithValue("@Password", textBox4.Text);
                     int id = (int)command.ExecuteScalar();
                     MessageBox.Show("You have been registered successfully, Your ID is : " + id);
-                    this.Hide();
-                    Form1 mainMenu = new Form1();
-                    mainMenu.ShowDialog();
+                    this.Close();
                 }
             }
             

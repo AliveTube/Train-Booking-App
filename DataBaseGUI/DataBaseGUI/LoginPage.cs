@@ -19,18 +19,18 @@ namespace DataBaseGUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(IdBox.Text) || string.IsNullOrEmpty(PasswordBox.Text))
+            if (string.IsNullOrEmpty(EmailBox.Text) || string.IsNullOrEmpty(PasswordBox.Text))
             {
                 MessageBox.Show("Please fill all required fields !");
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     customerConnection.Open();
-                    String query = "SELECT fName+' '+lName as Name , fName , lName  , phone , email FROM Customer WHERE id = @customerID AND password = @Password";
+                    String query = "SELECT fName+' '+lName as Name , fName , lName  , phone , email FROM Customer WHERE email = @email AND password = @Password";
                     SqlCommand command = new SqlCommand(query, customerConnection);
-                    command.Parameters.AddWithValue("@customerID", int.Parse(IdBox.Text));
+                    command.Parameters.AddWithValue("@email", EmailBox.Text);
                     command.Parameters.AddWithValue("@Password", PasswordBox.Text);
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
@@ -38,14 +38,15 @@ namespace DataBaseGUI
                         Customer customer = new Customer();
                         customer.setEmail(reader["email"].ToString());
                         customer.setPhoneNumber(reader["phone"].ToString());
-                        customer.setCustomerID(int.Parse(IdBox.Text));
+                        customer.setCustomerID(int.Parse(EmailBox.Text));
                         customer.setPassword(PasswordBox.Text);
                         customer.setEmail(reader["email"].ToString());
                         customer.setfirstName(reader["fName"].ToString());
                         customer.setlastName(reader["lName"].ToString());
                         CustomerMenu customerMenu = new CustomerMenu(customer);
                         this.Hide();
-                        customerMenu.Show();
+                        customerMenu.ShowDialog();
+                        this.Close();
                     }
                     else
                     {

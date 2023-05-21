@@ -60,10 +60,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\ahmed\\Downloads\\Thomas_Tank_Engine_1.jpg";
+            this.pictureBox1.Image = global::DataBaseGUI.Properties.Resources.Thomas_Tank_Engine_1;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(110, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(572, 354);
+            this.pictureBox1.Size = new System.Drawing.Size(345, 307);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -100,7 +101,7 @@
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LoginMenu";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
