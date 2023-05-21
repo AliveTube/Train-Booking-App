@@ -1,19 +1,7 @@
 {
   "ExpandedNodes": [
-<<<<<<< Updated upstream
     ""
   ],
   "SelectedNode": "\\DataBaseGUI.sln",
   "PreviewInSolutionExplorer": false
-=======
-
-    "",
-    "\\DataBaseGUI",
-    "\\DataBaseGUI\\DataBaseGUI"
-  ],
-  "SelectedNode": "\\DataBaseGUI\\DataBaseGUI\\EditCustomerProfile.cs",
-
-  "SelectedNode": "\\DataBaseGUI.sln",
-
->>>>>>> Stashed changes
 }

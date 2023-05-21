@@ -32,23 +32,12 @@ namespace DataBaseGUI {
         
         private TrainDataTable tableTrain;
         
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-        private global::System.Data.DataRelation relationFK__Seat__TrainID__3D5E1FD2;
-        
-=======
->>>>>>> Stashed changes
         private TripDataTable tableTrip;
         
         private global::System.Data.DataRelation relationFK__Seat__TrainID__3D5E1FD2;
         
         private global::System.Data.DataRelation relationFK__Trip__Train__403A8C7D;
         
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -89,18 +78,9 @@ namespace DataBaseGUI {
                 if ((ds.Tables["Train"] != null)) {
                     base.Tables.Add(new TrainDataTable(ds.Tables["Train"]));
                 }
-<<<<<<< Updated upstream
                 if ((ds.Tables["Trip"] != null)) {
                     base.Tables.Add(new TripDataTable(ds.Tables["Trip"]));
                 }
-=======
-<<<<<<< HEAD
-=======
-                if ((ds.Tables["Trip"] != null)) {
-                    base.Tables.Add(new TripDataTable(ds.Tables["Trip"]));
-                }
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -161,11 +141,6 @@ namespace DataBaseGUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public TripDataTable Trip {
@@ -176,10 +151,6 @@ namespace DataBaseGUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -257,18 +228,9 @@ namespace DataBaseGUI {
                 if ((ds.Tables["Train"] != null)) {
                     base.Tables.Add(new TrainDataTable(ds.Tables["Train"]));
                 }
-<<<<<<< Updated upstream
                 if ((ds.Tables["Trip"] != null)) {
                     base.Tables.Add(new TripDataTable(ds.Tables["Trip"]));
                 }
-=======
-<<<<<<< HEAD
-=======
-                if ((ds.Tables["Trip"] != null)) {
-                    base.Tables.Add(new TripDataTable(ds.Tables["Trip"]));
-                }
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -326,12 +288,6 @@ namespace DataBaseGUI {
                     this.tableTrain.InitVars();
                 }
             }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-            this.relationFK__Seat__TrainID__3D5E1FD2 = this.Relations["FK__Seat__TrainID__3D5E1FD2"];
-=======
->>>>>>> Stashed changes
             this.tableTrip = ((TripDataTable)(base.Tables["Trip"]));
             if ((initTable == true)) {
                 if ((this.tableTrip != null)) {
@@ -340,10 +296,6 @@ namespace DataBaseGUI {
             }
             this.relationFK__Seat__TrainID__3D5E1FD2 = this.Relations["FK__Seat__TrainID__3D5E1FD2"];
             this.relationFK__Trip__Train__403A8C7D = this.Relations["FK__Trip__Train__403A8C7D"];
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,33 +314,16 @@ namespace DataBaseGUI {
             base.Tables.Add(this.tableSeat);
             this.tableTrain = new TrainDataTable();
             base.Tables.Add(this.tableTrain);
-<<<<<<< Updated upstream
             this.tableTrip = new TripDataTable();
             base.Tables.Add(this.tableTrip);
-=======
-<<<<<<< HEAD
-=======
-            this.tableTrip = new TripDataTable();
-            base.Tables.Add(this.tableTrip);
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
             this.relationFK__Seat__TrainID__3D5E1FD2 = new global::System.Data.DataRelation("FK__Seat__TrainID__3D5E1FD2", new global::System.Data.DataColumn[] {
                         this.tableTrain.TrainIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSeat.TrainIDColumn}, false);
             this.Relations.Add(this.relationFK__Seat__TrainID__3D5E1FD2);
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             this.relationFK__Trip__Train__403A8C7D = new global::System.Data.DataRelation("FK__Trip__Train__403A8C7D", new global::System.Data.DataColumn[] {
                         this.tableTrain.TrainIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTrip.TrainColumn}, false);
             this.Relations.Add(this.relationFK__Trip__Train__403A8C7D);
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -417,21 +352,12 @@ namespace DataBaseGUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
         private bool ShouldSerializeTrip() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -497,18 +423,9 @@ namespace DataBaseGUI {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TrainRowChangeEventHandler(object sender, TrainRowChangeEvent e);
         
-<<<<<<< Updated upstream
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TripRowChangeEventHandler(object sender, TripRowChangeEvent e);
         
-=======
-<<<<<<< HEAD
-=======
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void TripRowChangeEventHandler(object sender, TripRowChangeEvent e);
-        
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -1759,11 +1676,6 @@ namespace DataBaseGUI {
         }
         
         /// <summary>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
@@ -2091,10 +2003,6 @@ namespace DataBaseGUI {
         }
         
         /// <summary>
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AdminRow : global::System.Data.DataRow {
@@ -2395,11 +2303,6 @@ namespace DataBaseGUI {
                     return ((SeatRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Seat__TrainID__3D5E1FD2"])));
                 }
             }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2492,10 +2395,6 @@ namespace DataBaseGUI {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Trip__Train__403A8C7D"]);
                 }
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         }
         
         /// <summary>
@@ -2633,11 +2532,6 @@ namespace DataBaseGUI {
                 }
             }
         }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
         
         /// <summary>
         ///Row event argument class
@@ -2672,10 +2566,6 @@ namespace DataBaseGUI {
                 }
             }
         }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
     }
 }
 namespace DataBaseGUI.projectDBDataSetTableAdapters {
@@ -4215,11 +4105,6 @@ SELECT SeatNo, TrainID, SeatType FROM Seat WHERE (SeatNo = @SeatNo) AND (TrainID
     }
     
     /// <summary>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
     ///Represents the connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4586,10 +4471,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
     }
     
     /// <summary>
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4609,16 +4490,8 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
         
         private TrainTableAdapter _trainTableAdapter;
         
-<<<<<<< Updated upstream
         private TripTableAdapter _tripTableAdapter;
         
-=======
-<<<<<<< HEAD
-=======
-        private TripTableAdapter _tripTableAdapter;
-        
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -4692,11 +4565,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
@@ -4711,10 +4579,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4748,19 +4612,10 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                             && (this._trainTableAdapter.Connection != null))) {
                     return this._trainTableAdapter.Connection;
                 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
                 if (((this._tripTableAdapter != null) 
                             && (this._tripTableAdapter.Connection != null))) {
                     return this._tripTableAdapter.Connection;
                 }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 return null;
             }
             set {
@@ -4786,18 +4641,9 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                 if ((this._trainTableAdapter != null)) {
                     count = (count + 1);
                 }
-<<<<<<< Updated upstream
                 if ((this._tripTableAdapter != null)) {
                     count = (count + 1);
                 }
-=======
-<<<<<<< HEAD
-=======
-                if ((this._tripTableAdapter != null)) {
-                    count = (count + 1);
-                }
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 return count;
             }
         }
@@ -4845,11 +4691,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             if ((this._tripTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Trip.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -4859,10 +4700,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
             return result;
         }
         
@@ -4905,11 +4742,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     allAddedRows.AddRange(addedRows);
                 }
             }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             if ((this._tripTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Trip.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -4918,10 +4750,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     allAddedRows.AddRange(addedRows);
                 }
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
             return result;
         }
         
@@ -4932,11 +4760,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(projectDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             if ((this._tripTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Trip.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4945,10 +4768,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
             if ((this._seatTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Seat.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5040,20 +4859,11 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             if (((this._tripTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tripTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -5122,11 +4932,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                         adaptersWithAcceptChangesDuringUpdate.Add(this._trainTableAdapter.Adapter);
                     }
                 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
                 if ((this._tripTableAdapter != null)) {
                     revertConnections.Add(this._tripTableAdapter, this._tripTableAdapter.Connection);
                     this._tripTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -5136,10 +4941,6 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tripTableAdapter.Adapter);
                     }
                 }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 // 
                 //---- Perform updates -----------
                 //
@@ -5214,19 +5015,10 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
                     this._trainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._trainTableAdapter]));
                     this._trainTableAdapter.Transaction = null;
                 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
                 if ((this._tripTableAdapter != null)) {
                     this._tripTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tripTableAdapter]));
                     this._tripTableAdapter.Transaction = null;
                 }
-<<<<<<< Updated upstream
-=======
->>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
->>>>>>> Stashed changes
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
                     adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
