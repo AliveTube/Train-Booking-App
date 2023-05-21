@@ -26,7 +26,16 @@ namespace DataBaseGUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+<<<<<<< Updated upstream
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True")]
+=======
+<<<<<<< HEAD
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Sec" +
+            "urity=True")]
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True")]
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
         public string projectDBConnectionString {
             get {
                 return ((string)(this["projectDBConnectionString"]));

@@ -5,10 +5,23 @@
     <Setting Name="projectDBConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  &lt;ConnectionString&gt;Data Source=DESKTOP-BR1VI60\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-BR1VI60\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True</Value>
+=======
+>>>>>>> Stashed changes
   &lt;ConnectionString&gt;Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True</Value>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
     </Setting>
   </Settings>
 </SettingsFile>

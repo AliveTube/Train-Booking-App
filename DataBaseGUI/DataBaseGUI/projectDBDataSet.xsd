@@ -246,6 +246,11 @@ SELECT TrainID, Model FROM Train WHERE (TrainID = @TrainID)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TripTableAdapter" GeneratorDataComponentClassName="TripTableAdapter" Name="Trip" UserDataComponentName="TripTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Trip" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -308,6 +313,10 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
             </Mappings>
             <Sources />
           </TableAdapter>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
         </Tables>
         <Sources />
       </DataSource>
@@ -429,6 +438,11 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
         <xs:element name="Trip" msprop:Generator_RowEvHandlerName="TripRowChangeEventHandler" msprop:Generator_RowDeletedName="TripRowDeleted" msprop:Generator_RowDeletingName="TripRowDeleting" msprop:Generator_RowEvArgName="TripRowChangeEvent" msprop:Generator_TablePropName="Trip" msprop:Generator_RowChangedName="TripRowChanged" msprop:Generator_RowChangingName="TripRowChanging" msprop:Generator_TableClassName="TripDataTable" msprop:Generator_RowClassName="TripRow" msprop:Generator_TableVarName="tableTrip" msprop:Generator_UserTableName="Trip">
           <xs:complexType>
             <xs:sequence>
@@ -452,6 +466,10 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -471,15 +489,31 @@ SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @T
       <xs:selector xpath=".//mstns:Train" />
       <xs:field xpath="mstns:TrainID" />
     </xs:unique>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     <xs:unique name="Trip_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Trip" />
       <xs:field xpath="mstns:TripID" />
     </xs:unique>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="FK__Seat__TrainID__3D5E1FD2" msdata:parent="Train" msdata:child="Seat" msdata:parentkey="TrainID" msdata:childkey="TrainID" msprop:Generator_UserParentTable="Train" msprop:Generator_UserChildTable="Seat" msprop:Generator_RelationVarName="relationFK__Seat__TrainID__3D5E1FD2" msprop:Generator_UserRelationName="FK__Seat__TrainID__3D5E1FD2" msprop:Generator_ChildPropName="GetSeatRows" msprop:Generator_ParentPropName="TrainRow" />
+<<<<<<< Updated upstream
       <msdata:Relationship name="FK__Trip__Train__403A8C7D" msdata:parent="Train" msdata:child="Trip" msdata:parentkey="TrainID" msdata:childkey="Train" msprop:Generator_UserParentTable="Train" msprop:Generator_UserChildTable="Trip" msprop:Generator_RelationVarName="relationFK__Trip__Train__403A8C7D" msprop:Generator_ChildPropName="GetTripRows" msprop:Generator_ParentPropName="TrainRow" msprop:Generator_UserRelationName="FK__Trip__Train__403A8C7D" />
+=======
+<<<<<<< HEAD
+=======
+      <msdata:Relationship name="FK__Trip__Train__403A8C7D" msdata:parent="Train" msdata:child="Trip" msdata:parentkey="TrainID" msdata:childkey="Train" msprop:Generator_UserParentTable="Train" msprop:Generator_UserChildTable="Trip" msprop:Generator_RelationVarName="relationFK__Trip__Train__403A8C7D" msprop:Generator_ChildPropName="GetTripRows" msprop:Generator_ParentPropName="TrainRow" msprop:Generator_UserRelationName="FK__Trip__Train__403A8C7D" />
+>>>>>>> 8d36ade0f48c2978fa1520f766ee59e5786221f5
+>>>>>>> Stashed changes
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
