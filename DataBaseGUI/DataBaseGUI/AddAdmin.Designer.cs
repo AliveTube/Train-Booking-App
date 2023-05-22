@@ -45,7 +45,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.button1.Location = new System.Drawing.Point(350, 453);
+            this.button1.Location = new System.Drawing.Point(350, 444);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 51);
             this.button1.TabIndex = 19;

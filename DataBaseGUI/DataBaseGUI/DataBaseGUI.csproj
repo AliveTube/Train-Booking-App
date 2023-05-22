@@ -52,23 +52,29 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTicket.Designer.cs">
+      <DependentUpon>AddTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTrainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddTrainForm.Designer.cs">
       <DependentUpon>AddTrainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTripFrom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddTripFrom.Designer.cs">
-      <DependentUpon>AddTripFrom.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseSeat.Designer.cs">
+      <DependentUpon>ChooseSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerMenu.cs">
       <SubType>Form</SubType>
@@ -140,14 +146,17 @@
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTicket.resx">
+      <DependentUpon>AddTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTrainForm.resx">
       <DependentUpon>AddTrainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTripFrom.resx">
-      <DependentUpon>AddTripFrom.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseSeat.resx">
+      <DependentUpon>ChooseSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>

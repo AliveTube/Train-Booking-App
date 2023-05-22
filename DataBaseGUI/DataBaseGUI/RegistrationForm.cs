@@ -31,7 +31,7 @@ namespace DataBaseGUI
             else
             {
                 // We use using keyword so it handles exeptions if happened and also to close the connection after finishing automatically
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("INSERT INTO Customer (fName , lName , email , password, phone) values (@fName, @lName, @email, @password, @phone)", connection);

@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="projectDBConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectDBConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataBaseGUI.Properties.Settings.GlobalReference.Default.projectDBConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="projectDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataBaseGUI.Properties.Settings.GlobalReference.Default.projectDBConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdminTableAdapter" GeneratorDataComponentClassName="AdminTableAdapter" Name="Admin" UserDataComponentName="AdminTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Admin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Admin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Admin] WHERE (([adminId] = @Original_adminId) AND ([fName] = @Original_fName) AND ([lName] = @Original_lName) AND ([email] = @Original_email) AND ([password] = @Original_password) AND ([phone] = @Original_phone))</CommandText>
@@ -76,7 +76,7 @@ SELECT adminId, fName, lName, email, password, phone FROM Admin WHERE (adminId =
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerTableAdapter" GeneratorDataComponentClassName="CustomerTableAdapter" Name="Customer" UserDataComponentName="CustomerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Customer] WHERE (([id] = @Original_id) AND ([fName] = @Original_fName) AND ([lName] = @Original_lName) AND ([email] = @Original_email) AND ([password] = @Original_password) AND ([phone] = @Original_phone))</CommandText>
@@ -143,7 +143,7 @@ SELECT id, fName, lName, email, password, phone FROM Customer WHERE (id = @id)</
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SeatTableAdapter" GeneratorDataComponentClassName="SeatTableAdapter" Name="Seat" UserDataComponentName="SeatTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Seat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Seat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Seat] WHERE (([SeatNo] = @Original_SeatNo) AND ([TrainID] = @Original_TrainID) AND ((@IsNull_SeatType = 1 AND [SeatType] IS NULL) OR ([SeatType] = @Original_SeatType)))</CommandText>
@@ -198,7 +198,7 @@ SELECT SeatNo, TrainID, SeatType FROM Seat WHERE (SeatNo = @SeatNo) AND (TrainID
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TicketTableAdapter" GeneratorDataComponentClassName="TicketTableAdapter" Name="Ticket" UserDataComponentName="TicketTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Ticket" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Ticket" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Ticket] WHERE (([TicketID] = @Original_TicketID) AND ((@IsNull_CustomerID = 1 AND [CustomerID] IS NULL) OR ([CustomerID] = @Original_CustomerID)) AND ([TrainID] = @Original_TrainID) AND ([SeatNo] = @Original_SeatNo) AND ((@IsNull_TripID = 1 AND [TripID] IS NULL) OR ([TripID] = @Original_TripID)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))</CommandText>
@@ -272,7 +272,7 @@ SELECT TicketID, CustomerID, TrainID, SeatNo, TripID, Price FROM Ticket WHERE (T
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrainTableAdapter" GeneratorDataComponentClassName="TrainTableAdapter" Name="Train" UserDataComponentName="TrainTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Train" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Train" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Train] WHERE (([TrainID] = @Original_TrainID) AND ((@IsNull_Model = 1 AND [Model] IS NULL) OR ([Model] = @Original_Model)))</CommandText>
@@ -322,51 +322,51 @@ SELECT TrainID, Model FROM Train WHERE (TrainID = @TrainID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TripTableAdapter" GeneratorDataComponentClassName="TripTableAdapter" Name="Trip" UserDataComponentName="TripTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="projectDBConnectionString1 (Settings)" DbObjectName="projectDB.dbo.Trip" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="projectDBConnectionString (Settings)" DbObjectName="projectDB.dbo.Trip" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Trip] WHERE (([TripID] = @Original_TripID) AND ([TripDate] = @Original_TripDate) AND ([Train] = @Original_Train) AND ([Source] = @Original_Source) AND ([Destination] = @Original_Destination))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Trip] WHERE (([TripID] = @Original_TripID) AND ([Source] = @Original_Source) AND ([Destination] = @Original_Destination) AND ([TripDate] = @Original_TripDate) AND ([Train] = @Original_Train))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TripID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TripID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Destination" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Destination" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Trip] ([TripDate], [Train], [Source], [Destination]) VALUES (@TripDate, @Train, @Source, @Destination);
-SELECT TripID, TripDate, Train, Source, Destination FROM Trip WHERE (TripID = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Trip] ([Source], [Destination], [TripDate], [Train]) VALUES (@Source, @Destination, @TripDate, @Train);
+SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Destination" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Destination" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT TripID, TripDate, Train, Source, Destination FROM dbo.Trip</CommandText>
+                    <CommandText>SELECT TripID, Source, Destination, TripDate, Train FROM dbo.Trip</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Trip] SET [TripDate] = @TripDate, [Train] = @Train, [Source] = @Source, [Destination] = @Destination WHERE (([TripID] = @Original_TripID) AND ([TripDate] = @Original_TripDate) AND ([Train] = @Original_Train) AND ([Source] = @Original_Source) AND ([Destination] = @Original_Destination));
-SELECT TripID, TripDate, Train, Source, Destination FROM Trip WHERE (TripID = @TripID)</CommandText>
+                    <CommandText>UPDATE [dbo].[Trip] SET [Source] = @Source, [Destination] = @Destination, [TripDate] = @TripDate, [Train] = @Train WHERE (([TripID] = @Original_TripID) AND ([Source] = @Original_Source) AND ([Destination] = @Original_Destination) AND ([TripDate] = @Original_TripDate) AND ([Train] = @Original_Train));
+SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE (TripID = @TripID)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Destination" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Destination" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TripID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TripID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Destination" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Destination" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TripDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TripDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Train" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Train" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="TripID" ColumnName="TripID" DataSourceName="projectDB.dbo.Trip" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TripID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TripID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -375,10 +375,10 @@ SELECT TripID, TripDate, Train, Source, Destination FROM Trip WHERE (TripID = @T
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="TripID" DataSetColumn="TripID" />
-              <Mapping SourceColumn="TripDate" DataSetColumn="TripDate" />
-              <Mapping SourceColumn="Train" DataSetColumn="Train" />
               <Mapping SourceColumn="Source" DataSetColumn="Source" />
               <Mapping SourceColumn="Destination" DataSetColumn="Destination" />
+              <Mapping SourceColumn="TripDate" DataSetColumn="TripDate" />
+              <Mapping SourceColumn="Train" DataSetColumn="Train" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -519,22 +519,22 @@ SELECT TripID, TripDate, Train, Source, Destination FROM Trip WHERE (TripID = @T
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TripID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="TripID" msprop:Generator_ColumnPropNameInTable="TripIDColumn" msprop:Generator_ColumnVarNameInTable="columnTripID" msprop:Generator_UserColumnName="TripID" type="xs:int" />
-              <xs:element name="TripDate" msprop:Generator_ColumnPropNameInRow="TripDate" msprop:Generator_ColumnPropNameInTable="TripDateColumn" msprop:Generator_ColumnVarNameInTable="columnTripDate" msprop:Generator_UserColumnName="TripDate" type="xs:dateTime" />
-              <xs:element name="Train" msprop:Generator_ColumnPropNameInRow="Train" msprop:Generator_ColumnPropNameInTable="TrainColumn" msprop:Generator_ColumnVarNameInTable="columnTrain" msprop:Generator_UserColumnName="Train" type="xs:int" />
               <xs:element name="Source" msprop:Generator_ColumnPropNameInRow="Source" msprop:Generator_ColumnPropNameInTable="SourceColumn" msprop:Generator_ColumnVarNameInTable="columnSource" msprop:Generator_UserColumnName="Source">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_UserColumnName="Destination">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TripDate" msprop:Generator_ColumnPropNameInRow="TripDate" msprop:Generator_ColumnPropNameInTable="TripDateColumn" msprop:Generator_ColumnVarNameInTable="columnTripDate" msprop:Generator_UserColumnName="TripDate" type="xs:dateTime" />
+              <xs:element name="Train" msprop:Generator_ColumnPropNameInRow="Train" msprop:Generator_ColumnPropNameInTable="TrainColumn" msprop:Generator_ColumnVarNameInTable="columnTrain" msprop:Generator_UserColumnName="Train" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

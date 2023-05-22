@@ -17,6 +17,14 @@ namespace DataBaseGUI
         {
             InitializeComponent();
         }
+        public string getEmail()
+        {
+            return EmailBox.Text;
+        }
+        public string getPass()
+        {
+            return PasswordBox.Text;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(EmailBox.Text) || string.IsNullOrEmpty(PasswordBox.Text))
@@ -25,7 +33,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     customerConnection.Open();
                     String query = "SELECT fName+' '+lName as Name , fName , lName , id , phone , email FROM Customer WHERE email = @email AND password = @Password";
@@ -43,7 +51,7 @@ namespace DataBaseGUI
                         customer.setEmail(reader["email"].ToString());
                         customer.setfirstName(reader["fName"].ToString());
                         customer.setlastName(reader["lName"].ToString());
-                        CustomerMenu customerMenu = new CustomerMenu(customer);
+                        CustomerMenu customerMenu = new CustomerMenu(customer,this);
                         this.Hide();
                         customerMenu.ShowDialog();
                         this.Close();

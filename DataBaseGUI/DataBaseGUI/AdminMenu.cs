@@ -56,13 +56,5 @@ namespace DataBaseGUI
         {
             Close();
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AddTripFrom addTripFrom = new AddTripFrom();
-            this.Hide();
-            addTripFrom.ShowDialog();
-            this.Show();
-        }
     }
 }
