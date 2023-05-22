@@ -33,7 +33,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     customerConnection.Open();
                     String query = "SELECT fName+' '+lName as Name , fName , lName , id , phone , email FROM Customer WHERE email = @email AND password = @Password";

@@ -13,7 +13,7 @@ namespace DataBaseGUI
 {
     public partial class AddTicket : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True");
         private LoginPage customer = null;
         public AddTicket(LoginPage x)
         {
@@ -21,28 +21,9 @@ namespace DataBaseGUI
             customer = x;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddTicket_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'projectDBDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.projectDBDataSet.Customer);
-            // TODO: This line of code loads data into the 'projectDBDataSet.Admin' table. You can move, or remove it, as needed.
-            this.adminTableAdapter.Fill(this.projectDBDataSet.Admin);
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             
             
             if(!string.IsNullOrEmpty(textBox1.Text)&&!string.IsNullOrEmpty(textBox2.Text))
@@ -96,7 +77,7 @@ namespace DataBaseGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             string search = textBox3.Text;
             string sqlQuery = "SELECT COUNT(*) FROM Customer WHERE id = @SearchValue";
             using (SqlConnection connection = new SqlConnection(connectionString))

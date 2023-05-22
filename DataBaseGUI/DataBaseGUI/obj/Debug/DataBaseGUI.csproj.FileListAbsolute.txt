@@ -67,3 +67,5 @@ C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.ChooseSeat.resources
+F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
+F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.ChooseSeat.resources

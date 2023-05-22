@@ -29,7 +29,7 @@ namespace DataBaseGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             string sqlQuery = "SELECT * FROM Seat WHERE SeatNo NOT IN (SELECT SeatNo FROM Ticket)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -60,7 +60,7 @@ namespace DataBaseGUI
             string sqlQuery = "SELECT id FROM Customer WHERE email = @value1 AND password =@value2";
             string email = customer.getEmail();
             string password = customer.getPass();
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -79,7 +79,7 @@ namespace DataBaseGUI
             string ans = "234";
             string sqlQuery = "SELECT Train FROM Trip WHERE TripID = @value1";
             string tripID = trip.getTripID();
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -103,7 +103,7 @@ namespace DataBaseGUI
         private void insert()
         {
             string sqlQuery = "INSERT INTO Ticket (CustomerID, TrainID, SeatNo, TripID, Price) VALUES (@Value2, @Value3, @Value4, @Value5, @Value6)";
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -129,7 +129,7 @@ namespace DataBaseGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             string searchValue = textBox1.Text;
             string sqlQuery = "SELECT COUNT(*) FROM Seat WHERE SeatNo = @SearchValue AND SeatNo NOT IN (SELECT SeatNo FROM Ticket)";
 
