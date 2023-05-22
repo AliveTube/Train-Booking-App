@@ -84,7 +84,6 @@
             this.label2.Size = new System.Drawing.Size(144, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Destination";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -94,7 +93,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -210,7 +208,6 @@
             this.Controls.Add(this.button1);
             this.Name = "AddTicket";
             this.Text = "AddTicket";
-            this.Load += new System.EventHandler(this.AddTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.projectDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tripBindingSource)).EndInit();

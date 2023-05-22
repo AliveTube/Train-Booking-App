@@ -21,7 +21,7 @@ namespace DataBaseGUI
 
         private void EditTrainForm_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TrainID From Train", connection);
@@ -38,7 +38,7 @@ namespace DataBaseGUI
         {
             dataGridView1.Rows.Clear();
             int trainNo = int.Parse(comboBox1.SelectedItem.ToString());
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT * From Train WHERE TrainID = @num", connection);
@@ -76,7 +76,7 @@ namespace DataBaseGUI
         private void button1_Click(object sender, EventArgs e)
         {
             int count = 0;
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 foreach (DataGridViewRow seat in dataGridView1.Rows)

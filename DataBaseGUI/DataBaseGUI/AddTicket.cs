@@ -13,7 +13,7 @@ namespace DataBaseGUI
 {
     public partial class AddTicket : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True");
         private LoginPage customer = null;
         public AddTicket(LoginPage x)
         {
@@ -23,7 +23,7 @@ namespace DataBaseGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True";
             
             
             if(!string.IsNullOrEmpty(textBox1.Text)&&!string.IsNullOrEmpty(textBox2.Text))
@@ -77,7 +77,7 @@ namespace DataBaseGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
+            string connectionString = "Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True";
             string search = textBox3.Text;
             string sqlQuery = "SELECT COUNT(*) FROM Customer WHERE id = @SearchValue";
             using (SqlConnection connection = new SqlConnection(connectionString))

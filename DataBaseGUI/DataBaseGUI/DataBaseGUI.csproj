@@ -64,6 +64,12 @@
     <Compile Include="AddTrainForm.Designer.cs">
       <DependentUpon>AddTrainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTripFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTripFrom.Designer.cs">
+      <DependentUpon>AddTripFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddTrainForm.resx">
       <DependentUpon>AddTrainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTripFrom.resx">
+      <DependentUpon>AddTripFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
