@@ -25,7 +25,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     customerConnection.Open();
                     String query = "SELECT fName+' '+lName as Name , fName , lName , id , phone , email FROM Customer WHERE email = @email AND password = @Password";
@@ -38,7 +38,7 @@ namespace DataBaseGUI
                         Customer customer = new Customer();
                         customer.setEmail(reader["email"].ToString());
                         customer.setPhoneNumber(reader["phone"].ToString());
-                        customer.setCustomerID(int.Parse(reader["id"].ToString());
+                        customer.setCustomerID(int.Parse(reader["id"].ToString()));
                         customer.setPassword(PasswordBox.Text);
                         customer.setEmail(reader["email"].ToString());
                         customer.setfirstName(reader["fName"].ToString());

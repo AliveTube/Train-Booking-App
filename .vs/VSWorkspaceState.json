@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DataBaseGUI",
+    "\\DataBaseGUI\\DataBaseGUI"
   ],
-  "SelectedNode": "\\DataBaseGUI.sln",
+  "SelectedNode": "\\DataBaseGUI\\DataBaseGUI\\AddTripFrom.cs",
   "PreviewInSolutionExplorer": false
 }
