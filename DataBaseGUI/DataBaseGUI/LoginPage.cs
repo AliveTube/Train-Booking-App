@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,10 +25,10 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=ALIVETUBE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     customerConnection.Open();
-                    String query = "SELECT fName+' '+lName as Name , fName , lName  , phone , email FROM Customer WHERE email = @email AND password = @Password";
+                    String query = "SELECT fName+' '+lName as Name , fName , lName , id , phone , email FROM Customer WHERE email = @email AND password = @Password";
                     SqlCommand command = new SqlCommand(query, customerConnection);
                     command.Parameters.AddWithValue("@email", EmailBox.Text);
                     command.Parameters.AddWithValue("@Password", PasswordBox.Text);
@@ -38,7 +38,7 @@ namespace DataBaseGUI
                         Customer customer = new Customer();
                         customer.setEmail(reader["email"].ToString());
                         customer.setPhoneNumber(reader["phone"].ToString());
-                        customer.setCustomerID(int.Parse(EmailBox.Text));
+                        customer.setCustomerID(int.Parse(reader["id"].ToString());
                         customer.setPassword(PasswordBox.Text);
                         customer.setEmail(reader["email"].ToString());
                         customer.setfirstName(reader["fName"].ToString());
