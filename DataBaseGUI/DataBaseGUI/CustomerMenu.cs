@@ -13,13 +13,11 @@ namespace DataBaseGUI
     public partial class CustomerMenu : Form
     {
         public Customer customer;
-        public LoginPage data;
         public CustomerMenu(Customer customer, LoginPage data)
         {
             this.customer = customer;
             InitializeComponent();
             label1.Text = "Welcome back Mr/Mrs " + customer.getfirstName() + ' ' + customer.getlastName();
-            this.data = data;
         }
 
         private void CustomerMenu_Load(object sender, EventArgs e)
@@ -41,9 +39,9 @@ namespace DataBaseGUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            AddTicket x=new AddTicket(data);
+            AddTicket form=new AddTicket(customer);
             this.Hide();
-            x.ShowDialog();
+            form.ShowDialog();
             this.Show();
         }
 

@@ -8,110 +8,138 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DataBaseGUI
 {
     public partial class AddTicket : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True");
-        private LoginPage customer = null;
-        public AddTicket(LoginPage x)
+        private Customer customer = null;
+        public AddTicket(Customer customer)
         {
             InitializeComponent();
-            customer = x;
+            this.customer = customer;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        int getIDFromString(string str)
         {
-            string connectionString = "Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True";
-            
-            
-            if(!string.IsNullOrEmpty(textBox1.Text)&&!string.IsNullOrEmpty(textBox2.Text))
+            string s = "";
+            foreach (char c in str)
             {
-                string sqlQuery = "SELECT * FROM Trip WHERE Source = @source AND Destination = @dest";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@source", textBox1.Text);
-                        command.Parameters.AddWithValue("@dest", textBox2.Text);
-
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-
-                        adapter.Fill(dataTable);
-
-                        dataGridView1.DataSource = dataTable;
-                        dataGridView1.ReadOnly = true;
-                    }
-                }
+                if (c == ' ')
+                    break;
+                s += c;
             }
-            else
-            {   
-                string sqlQuery = "SELECT * FROM Trip";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
-                    {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-
-                        adapter.Fill(dataTable);
-
-                        dataGridView1.DataSource = dataTable;
-                        dataGridView1.ReadOnly = true;
-                    }
-                }
-            }
-            
-
-
-
-
-
-        }
-        public string getTripID()
-        {
-            return textBox3.Text;
+            return int.Parse(s);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True";
-            string search = textBox3.Text;
-            string sqlQuery = "SELECT COUNT(*) FROM Customer WHERE id = @SearchValue";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            int tripID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            int trainID = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
-
-                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                foreach (int i in checkedListBox1.SelectedIndices)
                 {
-                    command.Parameters.AddWithValue("@SearchValue", search);
-
-                    int count = (int)command.ExecuteScalar();
-
-                    if (count > 0)
-                    {
-                        ChooseSeat x = new ChooseSeat(this,customer);
-                        this.Hide();
-                        x.ShowDialog();
-                        this.Show();
-
-                    }
-                    else
-                    {
-                        
-                        MessageBox.Show("The ID Trip You Entered Is not Valid\nPlease Try Again");
-                    }
+                    int seatNo = getIDFromString(checkedListBox1.Items[i].ToString());
+                    SqlCommand newCommand = new SqlCommand("INSERT INTO Ticket (CustomerID, TrainID, SeatNo, TripID, Price) VALUES (@cid, @tid, @sno, @trid, 25)", connection);
+                    newCommand.Parameters.AddWithValue("@cid", customer.getCustomerID());
+                    newCommand.Parameters.AddWithValue("@tid", trainID);
+                    newCommand.Parameters.AddWithValue("@sno", seatNo);
+                    newCommand.Parameters.AddWithValue("@trid", tripID);
+                    newCommand.ExecuteNonQuery();
                 }
             }
+            MessageBox.Show(string.Format("You bought {0} tickets for {1}$", checkedListBox1.SelectedIndices.Count, checkedListBox1.SelectedIndices.Count * 25));
+            this.Close();
+        }
 
+        private void AddTicket_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            {
+                connection.Open();
+                SqlCommand newCommand = new SqlCommand("SELECT Source FROM Trip", connection);
+                SqlDataReader reader = newCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox1.Items.Add(reader["Source"]);
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            string source = comboBox1.Text;
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            {
+                connection.Open();
+                SqlCommand newCommand = new SqlCommand("SELECT Destination FROM Trip WHERE Source = @src", connection);
+                newCommand.Parameters.AddWithValue("@src", source);
+                SqlDataReader reader = newCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    string dest = reader["Destination"].ToString();
+                    comboBox2.Items.Add(dest);
+                }
+            }
+        }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string source = comboBox1.Text;
+            string dest = comboBox2.Text;
+
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            {
+                connection.Open();
+                SqlCommand newCommand = new SqlCommand("SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE Source = @src AND Destination = @dest", connection);
+                newCommand.Parameters.AddWithValue("@src", source);
+                newCommand.Parameters.AddWithValue("@dest", dest);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(newCommand);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+                dataGridView1.ReadOnly = true;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (e.StateChanged != DataGridViewElementStates.Selected) return;
+            if (dataGridView1.CurrentRow == null) return;
+            checkedListBox1.Items.Clear();
+            int tripID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            int trainID = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            {
+                connection.Open();
+                SqlCommand newCommand = new SqlCommand("Select * From Seat Where SeatNo Not In ( Select SeatNo From Ticket Where TripID = @trip) AND TrainID = @train", connection);
+                newCommand.Parameters.AddWithValue("@train", trainID);
+                newCommand.Parameters.AddWithValue("@trip", tripID);
+
+                SqlDataReader reader = newCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    checkedListBox1.Items.Add(reader["SeatNo"].ToString() + ' ' + reader["SeatType"].ToString());
+                }
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

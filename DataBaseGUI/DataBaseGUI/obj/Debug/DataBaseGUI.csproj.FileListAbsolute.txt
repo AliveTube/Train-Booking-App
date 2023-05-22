@@ -95,3 +95,4 @@ D:\Database-project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe.config
 D:\Database-project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe
 D:\Database-project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
+F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources

@@ -76,12 +76,6 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseSeat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChooseSeat.Designer.cs">
-      <DependentUpon>ChooseSeat.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChooseSeat.resx">
-      <DependentUpon>ChooseSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
