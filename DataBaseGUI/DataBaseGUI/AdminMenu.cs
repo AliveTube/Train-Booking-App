@@ -64,5 +64,13 @@ namespace DataBaseGUI
             addTripFrom.ShowDialog();
             this.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EditTripForm editTripForm = new EditTripForm();
+            this.Hide();
+            editTripForm.ShowDialog();
+            this.Show();
+        }
     }
 }
