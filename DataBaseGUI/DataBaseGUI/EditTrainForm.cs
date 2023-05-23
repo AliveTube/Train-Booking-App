@@ -21,7 +21,7 @@ namespace DataBaseGUI
 
         private void EditTrainForm_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TrainID From Train", connection);
@@ -38,7 +38,7 @@ namespace DataBaseGUI
         {
             dataGridView1.Rows.Clear();
             int trainNo = int.Parse(comboBox1.SelectedItem.ToString());
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT * From Train WHERE TrainID = @num", connection);
@@ -76,7 +76,7 @@ namespace DataBaseGUI
         private void button1_Click(object sender, EventArgs e)
         {
             int count = 0;
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 foreach (DataGridViewRow seat in dataGridView1.Rows)
@@ -106,6 +106,49 @@ namespace DataBaseGUI
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public void deleteSeats()
+        {
+            string trainID = textBox1.Text;
+            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string deleteQuery = "DELETE FROM Seat WHERE TrainID = @t";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@t", trainID);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string trainID=textBox1.Text;
+            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string deleteQuery = "DELETE FROM Train WHERE TrainID = @t";
+            deleteSeats();
+            if (String.IsNullOrEmpty(trainID))
+            {
+                MessageBox.Show("Please Select a Train!");
+            }
+            else
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@t", trainID);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Train Deleted Successfully!");
+                this.Close();
+            }
+            
         }
     }
 }

@@ -26,7 +26,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     Admin admin = new Admin();
                     customerConnection.Open();

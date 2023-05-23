@@ -19,7 +19,7 @@ namespace DataBaseGUI
         private int selectedTrip = 0;
         public EditTripForm()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TripID From Trip", connection);
@@ -38,11 +38,11 @@ namespace DataBaseGUI
 
         private void EditTripForm_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 dataGridView1.Rows.Clear();
-                SqlCommand newCommand = new SqlCommand("SELECT Source, Destination, TripDate, Train From Trip", connection);
+                SqlCommand newCommand = new SqlCommand("SELECT t.Source, t.Destination, t.TripDate, tr.TrainID, tr.Model\r\nFROM Trip t\r\nINNER JOIN Train tr ON t.Train = tr.TrainID", connection);
                 SqlDataReader reader = newCommand.ExecuteReader();
                 while (reader.Read())
                 {
@@ -96,7 +96,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     DateTime date = dateTimePicker1.Value.Date;
@@ -144,6 +144,35 @@ namespace DataBaseGUI
             dateTimePicker2.Value = dateTimeValue;
             comboBox1.Text = selectedRow.Cells[3].Value.ToString();
             selectedTrip = tripID[dataGridView1.SelectedRows[0].Index];
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {   
+            string source, destination;
+            source= textBox1.Text;
+            destination= textBox2.Text;
+            string connectionString = "Data Source=DESKTOP-BR1VI60\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Security=True";
+            string deleteQuery = "DELETE FROM Trip WHERE Source = @src AND Destination = @des";
+            if (String.IsNullOrEmpty(source) || string.IsNullOrEmpty(destination))
+            {
+                MessageBox.Show("Please Select a Trip!");
+            }
+            else
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@src", source);
+                        command.Parameters.AddWithValue("@des", destination);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Trip Deleted Successfully!");
+                this.Close();
+            }
+  
         }
     }
 }
