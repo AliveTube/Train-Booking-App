@@ -72,5 +72,13 @@ namespace DataBaseGUI
             editTripForm.ShowDialog();
             this.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Statistics statistics = new Statistics();
+            this.Hide();
+            statistics.ShowDialog();
+            this.Show();
+        }
     }
 }

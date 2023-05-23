@@ -97,3 +97,4 @@ D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.r
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
+D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Statistics.resources
