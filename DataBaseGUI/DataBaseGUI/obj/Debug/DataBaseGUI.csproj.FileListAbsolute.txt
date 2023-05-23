@@ -68,7 +68,6 @@ C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.ChooseSeat.resources
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
-F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.ChooseSeat.resources
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.AssemblyReference.cache
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.SuggestedBindingRedirects.cache
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddAdmin.resources
@@ -96,3 +95,4 @@ D:\Database-project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
+F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources

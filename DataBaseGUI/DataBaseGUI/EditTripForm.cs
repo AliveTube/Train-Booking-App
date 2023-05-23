@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,15 +15,30 @@ namespace DataBaseGUI
 {
     public partial class EditTripForm : Form
     {
-        private int tripID;
+        private int[] tripID = { };
+        private int selectedTrip = 0;
         public EditTripForm()
         {
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
+            {
+                connection.Open();
+                SqlCommand newCommand = new SqlCommand("SELECT TripID From Trip", connection);
+                SqlDataReader reader = newCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    tripID = tripID.Append(int.Parse(reader["TripID"].ToString())).ToArray();
+                }
+                reader.Close();
+
+                connection.Close();
+            }
             InitializeComponent();
+
         }
 
         private void EditTripForm_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 dataGridView1.Rows.Clear();
@@ -42,6 +58,7 @@ namespace DataBaseGUI
                     comboBox1.Items.Add(reader["TrainID"]);
                 }
                 reader.Close();
+
                 connection.Close();
             }
         }
@@ -79,7 +96,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     DateTime date = dateTimePicker1.Value.Date;
@@ -91,11 +108,11 @@ namespace DataBaseGUI
                     tripCommand.Parameters.AddWithValue("@Destination", textBox2.Text);
                     tripCommand.Parameters.AddWithValue("@TripDate", dateTime);
                     tripCommand.Parameters.AddWithValue("@Train", comboBox1.Text);
-                    tripCommand.Parameters.AddWithValue("@TripID", tripID);
+                    tripCommand.Parameters.AddWithValue("@TripID", selectedTrip);
                     tripCommand.ExecuteNonQuery();
-                    EditTripForm_Load(sender, e);
                     connection.Close();
                 }
+                Close();
             }
         }
 
@@ -107,45 +124,26 @@ namespace DataBaseGUI
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("ID: " + tripID.ToString());
 
-
-            using (SqlConnection Connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
-                {
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-
-                    textBox1.Text = selectedRow.Cells[0].Value.ToString();
-                    textBox2.Text = selectedRow.Cells[1].Value.ToString();
-                    string dateTimeString = selectedRow.Cells[2].Value.ToString();
-                    DateTime dateTimeValue;
-                    if (DateTime.TryParse(dateTimeString, out dateTimeValue))
-                    {
-                        dateTimePicker1.Value = dateTimeValue.Date;
-                        dateTimePicker2.Value = dateTimeValue;
-                    }
-                    
-                    comboBox1.Text = selectedRow.Cells[3].Value.ToString();
-                    Connection.Open();
-                    String query = "SELECT TripID FROM Trip WHERE TripDate = @TripDate AND Train = @Train";
-                    SqlCommand command = new SqlCommand(query, Connection);
-                    command.Parameters.AddWithValue("@TripDate", DateTime.Parse(dateTimeString));
-                    command.Parameters.AddWithValue("@Train", comboBox1.Text);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            tripID = int.Parse(reader["TripID"].ToString());
-                            MessageBox.Show("ID: "+tripID.ToString());
-                        }
-                    }
-                }
-            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0) return;
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+            textBox1.Text = selectedRow.Cells[0].Value.ToString();
+            textBox2.Text = selectedRow.Cells[1].Value.ToString();
+            string dateTimeString = selectedRow.Cells[2].Value.ToString();
+            DateTime dateTimeValue = DateTime.Parse(dateTimeString);
+            dateTimePicker1.Value = dateTimeValue.Date;
+            dateTimePicker2.Value = dateTimeValue;
+            comboBox1.Text = selectedRow.Cells[3].Value.ToString();
+            selectedTrip = tripID[dataGridView1.SelectedRows[0].Index];
         }
     }
 }

@@ -28,7 +28,7 @@ namespace DataBaseGUI
             else
             {
                 DateTime dt = dateTimePicker1.Value.Date + dateTimePicker2.Value.TimeOfDay;
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("INSERT INTO Trip (TripDate, Source, Destination, Train) values (@TripDate, @Source, @Destination, @Train)", connection);
@@ -49,7 +49,7 @@ namespace DataBaseGUI
 
         private void AddTripFrom_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TrainID FROM Train", connection);

@@ -26,13 +26,13 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     Admin admin = new Admin();
                     customerConnection.Open();
                     String query = "SELECT fName+' '+lName as Name , fName , lName, email , phone FROM Admin WHERE adminId = @adminID AND password = @Password";
                     SqlCommand command = new SqlCommand(query, customerConnection);
-                    command.Parameters.AddWithValue("@adminID", int.Parse(adminIdBox.Text));
+                    command.Parameters.AddWithValue("@adminID", adminIdBox.Text);
                     command.Parameters.AddWithValue("@Password", PasswordBox.Text);
                     SqlDataReader reader = command.ExecuteReader();
                    
