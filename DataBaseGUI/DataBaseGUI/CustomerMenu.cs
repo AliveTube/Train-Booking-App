@@ -17,7 +17,7 @@ namespace DataBaseGUI
         {
             this.customer = customer;
             InitializeComponent();
-            label1.Text = "Welcome back Mr/Mrs " + customer.getfirstName() + ' ' + customer.getlastName();
+            label1.Text = "Welcome back, " + customer.getfirstName();
         }
 
         private void CustomerMenu_Load(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace DataBaseGUI
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace DataBaseGUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            AddTicket form=new AddTicket(customer);
+            AddTicket form = new AddTicket(customer);
             this.Hide();
             form.ShowDialog();
             this.Show();

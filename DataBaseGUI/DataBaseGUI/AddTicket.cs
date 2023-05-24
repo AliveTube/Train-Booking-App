@@ -32,12 +32,11 @@ namespace DataBaseGUI
             }
             return int.Parse(s);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             int tripID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             int trainID = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 foreach (int i in checkedListBox1.CheckedIndices)
@@ -54,10 +53,9 @@ namespace DataBaseGUI
             MessageBox.Show(string.Format("You bought {0} tickets for {1}$", checkedListBox1.CheckedIndices.Count, checkedListBox1.CheckedIndices.Count * 25));
             this.Close();
         }
-
         private void AddTicket_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT Source FROM Trip", connection);
@@ -68,12 +66,11 @@ namespace DataBaseGUI
                 }
             }
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox2.Items.Clear();
             string source = comboBox1.Text;
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT Destination FROM Trip WHERE Source = @src", connection);
@@ -91,7 +88,7 @@ namespace DataBaseGUI
             string source = comboBox1.Text;
             string dest = comboBox2.Text;
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TripID, Source, Destination, TripDate, Train FROM Trip WHERE Source = @src AND Destination = @dest", connection);
@@ -123,7 +120,7 @@ namespace DataBaseGUI
             checkedListBox1.Items.Clear();
             int tripID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             int trainID = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT s.*\r\nFROM Seat s\r\nLEFT JOIN Ticket t ON s.SeatNo = t.SeatNo AND t.TripID = @trip\r\nWHERE s.TrainID = @train AND t.SeatNo IS NULL", connection);

@@ -28,7 +28,7 @@ namespace DataBaseGUI
             else
             {
                 // We use using keyword so it handles exeptions if happened and also to close the connection after finishing automatically
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("INSERT INTO Train VALUES (@id, @model)", connection);
@@ -64,16 +64,10 @@ namespace DataBaseGUI
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow newRow = new DataGridViewRow();
-            newRow.CreateCells(dataGridView1, dataGridView1.RowCount+1, "");
+            newRow.CreateCells(dataGridView1, dataGridView1.RowCount + 1, "");
             dataGridView1.Rows.Add(newRow);
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
-
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
 

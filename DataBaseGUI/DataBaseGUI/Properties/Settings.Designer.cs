@@ -26,8 +26,8 @@ namespace DataBaseGUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BELAL;Initial Catalog=projectDB;Integrated Sec" +
-            "urity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WAR-MACHINE\\MSSQLSERVER2;Initial Catalog=projectDB;Integrated Securit" +
+            "y=True")]
         public string projectDBConnectionString {
             get {
                 return ((string)(this["projectDBConnectionString"]));

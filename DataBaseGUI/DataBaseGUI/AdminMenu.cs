@@ -30,7 +30,7 @@ namespace DataBaseGUI
             form.ShowDialog();
             this.Show();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             EditTrainForm form = new EditTrainForm();
             this.Hide();
@@ -38,7 +38,7 @@ namespace DataBaseGUI
             this.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             AddAdmin addAdminPage = new AddAdmin();
             this.Hide();

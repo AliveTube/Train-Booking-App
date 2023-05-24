@@ -66,6 +66,7 @@ C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe.con
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
 C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
+C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.ChooseSeat.resources
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.AssemblyReference.cache
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.SuggestedBindingRedirects.cache
@@ -95,6 +96,57 @@ D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.re
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
 D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
 F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
-C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
-C:\Users\PC\Documents\Amin\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
-D:\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Statistics.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.AssemblyReference.cache
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddAdmin.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTrainForm.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AdminMenu.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.CustomerMenu.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditAdminProfile.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditCustomerProfile.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTrainForm.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Form1.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginAdmin.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginForm.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginPage.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.RegistrationForm.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.UserControl1.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.GenerateResource.cache
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.exe
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.pdb
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe.config
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Properties.Resources.resources
+C:\Users\ahmed\OneDrive\Desktop\Database Project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe.config
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.exe
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\bin\Debug\DataBaseGUI.pdb
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.AssemblyReference.cache
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddAdmin.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTicket.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTrainForm.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AddTripFrom.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.AdminMenu.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.CustomerMenu.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditAdminProfile.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditCustomerProfile.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTrainForm.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.EditTripForm.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Form1.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginAdmin.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginForm.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.LoginPage.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Properties.Resources.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.RegistrationForm.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Statistics.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.UserControl1.resources
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.GenerateResource.cache
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.exe
+C:\Users\ahmed\OneDrive\Desktop\New folder\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.pdb
+F:\Projects\C#\Database-project\DataBaseGUI\DataBaseGUI\obj\Debug\DataBaseGUI.Statistics.resources

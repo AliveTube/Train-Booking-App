@@ -19,7 +19,7 @@ namespace DataBaseGUI
         private int selectedTrip = 0;
         public EditTripForm()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TripID From Trip", connection);
@@ -38,11 +38,11 @@ namespace DataBaseGUI
 
         private void EditTripForm_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 dataGridView1.Rows.Clear();
-                SqlCommand newCommand = new SqlCommand("SELECT t.Source, t.Destination, t.TripDate, tr.TrainID, tr.Model\r\nFROM Trip t\r\nINNER JOIN Train tr ON t.Train = tr.TrainID", connection);
+                SqlCommand newCommand = new SqlCommand("SELECT t.Source, t.Destination, t.TripDate, tr.TrainID, tr.Model FROM Trip t INNER JOIN Train tr ON t.TrainID = tr.TrainID", connection);
                 SqlDataReader reader = newCommand.ExecuteReader();
                 while (reader.Read())
                 {
@@ -88,7 +88,7 @@ namespace DataBaseGUI
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(comboBox1.Text))
             {
@@ -96,13 +96,13 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     DateTime date = dateTimePicker1.Value.Date;
                     DateTime time = dateTimePicker2.Value;
                     DateTime dateTime = date.Add(time.TimeOfDay);
-                    string query = "UPDATE Trip SET Source = @Source , Destination = @Destination , TripDate = @TripDate , Train = @Train WHERE TripID = @TripID";
+                    string query = "UPDATE Trip SET Source = @Source , Destination = @Destination , TripDate = @TripDate , TrainID = @Train WHERE TripID = @TripID";
                     SqlCommand tripCommand = new SqlCommand(query, connection);
                     tripCommand.Parameters.AddWithValue("@Source", textBox1.Text);
                     tripCommand.Parameters.AddWithValue("@Destination", textBox2.Text);
@@ -126,7 +126,7 @@ namespace DataBaseGUI
         {
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             Close();
         }
@@ -146,12 +146,12 @@ namespace DataBaseGUI
             selectedTrip = tripID[dataGridView1.SelectedRows[0].Index];
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {   
+        private void button3_Click_1(object sender, EventArgs e)
+        {
             string source, destination;
-            source= textBox1.Text;
-            destination= textBox2.Text;
-            string connectionString = "Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True";
+            source = textBox1.Text;
+            destination = textBox2.Text;
+            string connectionString = "Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True";
             string deleteQuery = "DELETE FROM Trip WHERE Source = @src AND Destination = @des";
             if (String.IsNullOrEmpty(source) || string.IsNullOrEmpty(destination))
             {
@@ -172,7 +172,11 @@ namespace DataBaseGUI
                 MessageBox.Show("Trip Deleted Successfully!");
                 this.Close();
             }
-  
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

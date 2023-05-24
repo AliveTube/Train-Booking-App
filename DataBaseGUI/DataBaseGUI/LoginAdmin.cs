@@ -26,7 +26,7 @@ namespace DataBaseGUI
             }
             else
             {
-                using (SqlConnection customerConnection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection customerConnection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     Admin admin = new Admin();
                     customerConnection.Open();
@@ -35,7 +35,7 @@ namespace DataBaseGUI
                     command.Parameters.AddWithValue("@adminID", adminIdBox.Text);
                     command.Parameters.AddWithValue("@Password", PasswordBox.Text);
                     SqlDataReader reader = command.ExecuteReader();
-                   
+
                     if (reader.Read())
                     {
 
@@ -56,7 +56,7 @@ namespace DataBaseGUI
                     }
                 }
             }
-            
+
         }
 
         private void adminIdBox_TextChanged(object sender, EventArgs e)

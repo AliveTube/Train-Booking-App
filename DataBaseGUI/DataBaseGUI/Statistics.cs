@@ -30,7 +30,7 @@ namespace DataBaseGUI
             dataGridView1.Columns[2].HeaderText = "Tickets";
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TOP 10 C.fName, C.lName, COUNT(T.TicketID) AS TicketCount FROM Customer C JOIN Ticket T ON C.id = T.CustomerID GROUP BY C.fName, C.lName ORDER BY TicketCount DESC", connection);
@@ -65,7 +65,7 @@ namespace DataBaseGUI
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TOP 10 T.Source, T.Destination, COUNT(Tk.TicketID) AS TicketsSold FROM Trip T JOIN Ticket Tk ON T.TripID = Tk.TripID GROUP BY T.Source, T.Destination ORDER BY TicketsSold DESC;", connection);
@@ -80,6 +80,11 @@ namespace DataBaseGUI
                 connection.Close();
             }
             dataGridView1.Visible = true;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

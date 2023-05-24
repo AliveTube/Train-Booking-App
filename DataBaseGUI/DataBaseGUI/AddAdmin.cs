@@ -17,13 +17,10 @@ namespace DataBaseGUI
         {
             InitializeComponent();
         }
-
-
         private void AddAdmin_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text))
@@ -33,7 +30,7 @@ namespace DataBaseGUI
             else
             {
                 // We use using keyword so it handles exeptions if happened and also to close the connection after finishing automatically
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand newCommand = new SqlCommand("INSERT INTO Admin (fName , lName , email , password, phone) values (@fName, @lName, @email, @password, @phone)", connection);
@@ -54,11 +51,8 @@ namespace DataBaseGUI
                     this.Hide();
                     Form1 mainMenu = new Form1();
                     mainMenu.ShowDialog();
-                    
                 }
-                
             }
-            
         }
     }
 }

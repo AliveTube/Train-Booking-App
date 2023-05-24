@@ -18,7 +18,6 @@ namespace DataBaseGUI
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || comboBox1.SelectedIndex == -1)
@@ -28,10 +27,10 @@ namespace DataBaseGUI
             else
             {
                 DateTime dt = dateTimePicker1.Value.Date + dateTimePicker2.Value.TimeOfDay;
-                using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
                 {
                     connection.Open();
-                    SqlCommand newCommand = new SqlCommand("INSERT INTO Trip (TripDate, Source, Destination, Train) values (@TripDate, @Source, @Destination, @Train)", connection);
+                    SqlCommand newCommand = new SqlCommand("INSERT INTO Trip (TripDate, Source, Destination, TrainID) values (@TripDate, @Source, @Destination, @Train)", connection);
                     newCommand.Parameters.AddWithValue("@TripDate", dt);
                     newCommand.Parameters.AddWithValue("@Source", textBox2.Text);
                     newCommand.Parameters.AddWithValue("@Destination", textBox3.Text);
@@ -41,30 +40,27 @@ namespace DataBaseGUI
                 }
             }
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void AddTripFrom_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BELAL;Initial Catalog=projectDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=WAR-MACHINE;Initial Catalog=projectDB;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand newCommand = new SqlCommand("SELECT TrainID FROM Train", connection);
                 SqlDataReader reader = newCommand.ExecuteReader();
-                while (reader.Read()) { 
+                while (reader.Read())
+                {
                     comboBox1.Items.Add(reader["TrainID"]);
                 }
             }
         }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
 
